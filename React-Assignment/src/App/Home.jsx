@@ -1,7 +1,6 @@
 import React from "react"
 import Header from "./Header"
 import Post from "./Post"
-import Pagination from "./Pagination"
 class Home extends React.Component
 {
     render() {
@@ -16,7 +15,6 @@ class Home extends React.Component
                             </div>
                         </div>
                     </div>
-                    <Pagination />
                 </div>
             </div>
         );
