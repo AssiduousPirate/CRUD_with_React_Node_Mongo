@@ -1,0 +1,18 @@
+<h3 class="p-4 text-center">{{viewTitle}}</h3>
+<form action="/post" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{post._id}}">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="titleText" placeholder="Title" tabIndex="3" value="{{post.titleText}}">
+        <div class="text-danger">{{post.titleTextError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Body</label>
+        <textarea rows="5" cols="80" type="text" class="form-control" name="bodyText" placeholder="Body..." tabIndex="4" value="{{post.bodyText}}"></textarea>
+        <div class="text-danger">{{post.bodyTextError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/post/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

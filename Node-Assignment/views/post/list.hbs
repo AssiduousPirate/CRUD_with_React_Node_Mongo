@@ -1,0 +1,21 @@
+<h3 class="pt-5 mt-5 text-center"><a class="btn btn-secondary" href="/post"><i class="fa fa-plus"></i> Create New</a> Post List</h3>
+<div class="container-lg centered">
+    <div class="table-responsive">
+        {{#each list}}
+        <div class="table-wrapper">
+            <div class="row">
+                <div class="col-sm-8 p-5">
+                    <h4>{{this.titleText}}</h4>
+                    <p class="w">{{this.bodyText}}</p>
+                </div>
+                <div class="col-sm-2 p-5">
+                    <a href="/post/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-sm-2 p-5">
+                    <a href="/post/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
